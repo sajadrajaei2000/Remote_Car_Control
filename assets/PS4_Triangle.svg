@@ -1,0 +1,13 @@
+<svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="PS4_Triangle">
+<mask id="mask0_1_1067" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="101" height="101">
+<rect id="Rectangle 430" x="0.348633" y="0.543701" width="100" height="100" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_1_1067)">
+<g id="TriangleButton">
+<circle id="Ellipse 740" cx="50.3486" cy="50.5437" r="43" fill="white" stroke="white" stroke-width="4"/>
+<path id="Polygon 31" d="M27.241 66.1904L50.3499 26.1646L73.4589 66.1904H27.241Z" stroke="#10A78F" stroke-width="7"/>
+</g>
+</g>
+</g>
+</svg>

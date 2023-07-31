@@ -1,0 +1,13 @@
+<svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="PS4_Square">
+<mask id="mask0_1_1077" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="101" height="101">
+<rect id="Rectangle 433" x="0.348633" y="0.543701" width="100" height="100" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_1_1077)">
+<g id="SquareButton">
+<circle id="Ellipse 742" cx="50.3486" cy="50.5437" r="43" fill="white" stroke="white" stroke-width="4"/>
+<path id="Polygon 33" d="M70.6685 30.2253V70.8616H30.0322V30.2253H70.6685Z" stroke="#C27FB6" stroke-width="7"/>
+</g>
+</g>
+</g>
+</svg>

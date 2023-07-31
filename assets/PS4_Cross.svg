@@ -1,0 +1,13 @@
+<svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="PS4_Cross">
+<mask id="mask0_1_1097" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="101" height="101">
+<rect id="Rectangle 432" x="0.348633" y="0.543701" width="100" height="100" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_1_1097)">
+<g id="CrossButton">
+<circle id="Ellipse 744" cx="50.3486" cy="50.5437" r="43" fill="white" stroke="white" stroke-width="4"/>
+<path id="Polygon 35" d="M26.5322 74.3616L50.3503 50.5435M50.3503 50.5435L74.1685 26.7253M50.3503 50.5435L26.5322 26.7253M50.3503 50.5435L74.1685 74.3616" stroke="#5383C2" stroke-width="7"/>
+</g>
+</g>
+</g>
+</svg>
