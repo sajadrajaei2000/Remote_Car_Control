@@ -3,13 +3,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:project4/DiscoveryPage.dart';
 import 'package:project4/logic/Press.dart';
+import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
+import 'package:permission_handler/permission_handler.dart';
 
-void main(List<String> args) {
+void main(List<String> args) async {
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight,
   ]);
+  WidgetsFlutterBinding.ensureInitialized();
+  await FlutterBluetoothSerial.instance.requestEnable();
   runApp(const MaterialApp(
     home: Remote_Car_Control(),
     debugShowCheckedModeBanner: false,
@@ -38,7 +43,12 @@ class _Remote_Car_ControlState extends State<Remote_Car_Control> {
                 bottom: -50,
                 top: 10,
                 child: GestureDetector(
-                  onTap: _press.onUpPressed,
+                  onTap: () async {
+                    await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DiscoveryPage()));
+                  },
                   child: SvgPicture.asset(
                     'assets/up.svg',
                     width: 40,
@@ -141,7 +151,20 @@ class _Remote_Car_ControlState extends State<Remote_Car_Control> {
     );
   }
 
-  onUpPressed() {
-    print('Up');
+  discoverDevices() async {
+    // Request location permission
+    final status = await Permission.location.request();
+
+    // Check if the permission is granted
+    if (status.isGranted) {
+      // Start Bluetooth discovery
+      FlutterBluetoothSerial.instance.startDiscovery().listen((result) {
+        BluetoothDevice device = result.device;
+        print('Discovered device: ${device.name} (${device.address})');
+      });
+    } else {
+      // Handle permission not granted
+      print('Location permission not granted.');
+    }
   }
 }
